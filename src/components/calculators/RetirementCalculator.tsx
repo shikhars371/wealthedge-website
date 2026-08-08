@@ -52,12 +52,16 @@ export default function RetirementCalculator() {
 
         </div>
 
-        <Slider
-          value={currentAge}
-          min={20}
-          max={55}
-          onValueChange={setCurrentAge}
-        />
+   <Slider
+  value={currentAge}
+  min={20}
+  max={55}
+  onValueChange={(value) => {
+    if (typeof value === "number") {
+      setCurrentAge(value);
+    }
+  }}
+/>
 
       </div>
 
@@ -73,12 +77,16 @@ export default function RetirementCalculator() {
 
         </div>
 
-        <Slider
-          value={retirementAge}
-          min={50}
-          max={75}
-          onValueChange={setRetirementAge}
-        />
+<Slider
+  value={retirementAge}
+  min={50}
+  max={75}
+  onValueChange={(value) => {
+    if (typeof value === "number") {
+      setRetirementAge(value);
+    }
+  }}
+/>
 
       </div>
 
@@ -96,13 +104,17 @@ export default function RetirementCalculator() {
 
         </div>
 
-        <Slider
-          value={monthlyExpense}
-          min={10000}
-          max={500000}
-          step={5000}
-          onValueChange={setMonthlyExpense}
-        />
+<Slider
+  value={monthlyExpense}
+  min={10000}
+  max={500000}
+  step={5000}
+  onValueChange={(value) => {
+    if (typeof value === "number") {
+      setMonthlyExpense(value);
+    }
+  }}
+/>
 
       </div>
 
@@ -118,13 +130,17 @@ export default function RetirementCalculator() {
 
         </div>
 
-        <Slider
-          value={inflation}
-          min={3}
-          max={10}
-          step={0.5}
-          onValueChange={setInflation}
-        />
+<Slider
+  value={inflation}
+  min={3}
+  max={10}
+  step={0.5}
+  onValueChange={(value) => {
+    if (typeof value === "number") {
+      setInflation(value);
+    }
+  }}
+/>
 
       </div>
 
@@ -140,13 +156,17 @@ export default function RetirementCalculator() {
 
         </div>
 
-        <Slider
-          value={returnRate}
-          min={6}
-          max={18}
-          step={0.5}
-          onValueChange={setReturnRate}
-        />
+<Slider
+  value={returnRate}
+  min={6}
+  max={18}
+  step={0.5}
+  onValueChange={(value) => {
+    if (typeof value === "number") {
+      setReturnRate(value);
+    }
+  }}
+/>
 
       </div>
 

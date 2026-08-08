@@ -49,13 +49,17 @@ export default function InsuranceCalculator() {
 
         </div>
 
-        <Slider
-          value={annualIncome}
-          min={300000}
-          max={10000000}
-          step={100000}
-          onValueChange={setAnnualIncome}
-        />
+   <Slider
+  value={annualIncome}
+  min={300000}
+  max={10000000}
+  step={100000}
+  onValueChange={(value) => {
+    if (typeof value === "number") {
+      setAnnualIncome(value);
+    }
+  }}
+/>
 
       </div>
 
@@ -71,12 +75,16 @@ export default function InsuranceCalculator() {
 
         </div>
 
-        <Slider
-          value={age}
-          min={20}
-          max={65}
-          onValueChange={setAge}
-        />
+<Slider
+  value={age}
+  min={20}
+  max={65}
+  onValueChange={(value) => {
+    if (typeof value === "number") {
+      setAge(value);
+    }
+  }}
+/>
 
       </div>
 
@@ -92,12 +100,16 @@ export default function InsuranceCalculator() {
 
         </div>
 
-        <Slider
-          value={dependents}
-          min={0}
-          max={6}
-          onValueChange={setDependents}
-        />
+<Slider
+  value={dependents}
+  min={0}
+  max={6}
+  onValueChange={(value) => {
+    if (typeof value === "number") {
+      setDependents(value);
+    }
+  }}
+/>
 
       </div>
 
@@ -113,13 +125,17 @@ export default function InsuranceCalculator() {
 
         </div>
 
-        <Slider
-          value={existingCover}
-          min={0}
-          max={30000000}
-          step={500000}
-          onValueChange={setExistingCover}
-        />
+<Slider
+  value={existingCover}
+  min={0}
+  max={30000000}
+  step={500000}
+  onValueChange={(value) => {
+    if (typeof value === "number") {
+      setExistingCover(value);
+    }
+  }}
+/>
 
       </div>
 

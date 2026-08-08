@@ -54,9 +54,11 @@ export default function SIPCalculator() {
   min={500}
   max={100000}
   step={500}
-  onValueChange={(value) => {
-    setMonthlyInvestment(value);
-  }}
+onValueChange={(value) => {
+  setMonthlyInvestment(
+    Array.isArray(value) ? value[0] : value
+  );
+}}
 />
 
       </div>
@@ -83,7 +85,9 @@ value={years}
   max={40}
   step={1}
 onValueChange={(value) => {
-    setYears(value);
+  setYears(
+    Array.isArray(value) ? value[0] : value
+  );
 }}
 />
 
@@ -111,7 +115,9 @@ value={expectedReturn}
   max={20}
   step={0.5}
 onValueChange={(value) => {
-    setExpectedReturn(value);
+  setExpectedReturn(
+    Array.isArray(value) ? value[0] : value
+  );
 }}
 />
 
