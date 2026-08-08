@@ -56,7 +56,8 @@ export default function InsuranceCalculator() {
   step={100000}
   onValueChange={(value) => {
     if (typeof value === "number") {
-      setAnnualIncome(value);
+      setAnnualIncome(    Array.isArray(value) ? value[0] : value
+);
     }
   }}
 />
@@ -81,7 +82,8 @@ export default function InsuranceCalculator() {
   max={65}
   onValueChange={(value) => {
     if (typeof value === "number") {
-      setAge(value);
+      setAge(    Array.isArray(value) ? value[0] : value
+);
     }
   }}
 />
@@ -106,7 +108,8 @@ export default function InsuranceCalculator() {
   max={6}
   onValueChange={(value) => {
     if (typeof value === "number") {
-      setDependents(value);
+      setDependents(    Array.isArray(value) ? value[0] : value
+);
     }
   }}
 />
@@ -132,7 +135,8 @@ export default function InsuranceCalculator() {
   step={500000}
   onValueChange={(value) => {
     if (typeof value === "number") {
-      setExistingCover(value);
+      setExistingCover(    Array.isArray(value) ? value[0] : value
+);
     }
   }}
 />

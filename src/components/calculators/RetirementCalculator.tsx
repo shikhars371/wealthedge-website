@@ -58,7 +58,8 @@ export default function RetirementCalculator() {
   max={55}
   onValueChange={(value) => {
     if (typeof value === "number") {
-      setCurrentAge(value);
+      setCurrentAge(    Array.isArray(value) ? value[0] : value
+);
     }
   }}
 />
@@ -83,7 +84,8 @@ export default function RetirementCalculator() {
   max={75}
   onValueChange={(value) => {
     if (typeof value === "number") {
-      setRetirementAge(value);
+      setRetirementAge(    Array.isArray(value) ? value[0] : value
+);
     }
   }}
 />
@@ -111,7 +113,8 @@ export default function RetirementCalculator() {
   step={5000}
   onValueChange={(value) => {
     if (typeof value === "number") {
-      setMonthlyExpense(value);
+      setMonthlyExpense(    Array.isArray(value) ? value[0] : value
+);
     }
   }}
 />
@@ -137,7 +140,8 @@ export default function RetirementCalculator() {
   step={0.5}
   onValueChange={(value) => {
     if (typeof value === "number") {
-      setInflation(value);
+      setInflation(    Array.isArray(value) ? value[0] : value
+);
     }
   }}
 />
@@ -163,7 +167,8 @@ export default function RetirementCalculator() {
   step={0.5}
   onValueChange={(value) => {
     if (typeof value === "number") {
-      setReturnRate(value);
+      setReturnRate(    Array.isArray(value) ? value[0] : value
+);
     }
   }}
 />

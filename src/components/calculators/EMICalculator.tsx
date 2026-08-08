@@ -52,7 +52,8 @@ export default function EMICalculator() {
                     step={100000}
                     onValueChange={(value) => {
                         if (typeof value === "number") {
-                            setLoanAmount(value);
+                            setLoanAmount(    Array.isArray(value) ? value[0] : value
+);
                         }
                     }}
                 />
@@ -78,7 +79,8 @@ export default function EMICalculator() {
                     step={0.1}
                     onValueChange={(value) => {
                         if (typeof value === "number") {
-                            setInterestRate(value);
+                            setInterestRate(    Array.isArray(value) ? value[0] : value
+);
                         }
                     }}
                 />
@@ -104,7 +106,8 @@ export default function EMICalculator() {
                     step={1}
                     onValueChange={(value) => {
                         if (typeof value === "number") {
-                            setTenure(value);
+                            setTenure(    Array.isArray(value) ? value[0] : value
+);
                         }
                     }}
                 />
